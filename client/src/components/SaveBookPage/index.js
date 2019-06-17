@@ -20,13 +20,11 @@ class SaveBook extends Component{
           .catch(err => console.log(err));
       };
 
-    
-
     render () {
         return (
             <div>
                 {this.state.books.map((book, index)  => (
-                    <SavedCard key={index} book={book} />
+                    <SavedCard key={index} book={book} reload={this.loadBooks}/>
                 ))}
             </div>
         );
