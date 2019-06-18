@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import API from "../../utils/API";
 import SavedCard from '../SavedCard';
+import DeleteButton from '../deleteButton'
 
 // Destructuring the type, className, children and onClick props, applying them to the button element
 
@@ -9,6 +10,13 @@ class SaveBook extends Component{
         books: [],
       };
     
+    deleteBook = (props) => {
+    
+        API.deleteBook(props.id).then(() =>
+            this.loadBooks()
+        )    
+    }
+
     componentDidMount() {
         this.loadBooks();
     }
@@ -24,7 +32,10 @@ class SaveBook extends Component{
         return (
             <div>
                 {this.state.books.map((book, index)  => (
-                    <SavedCard key={index} book={book} reload={this.loadBooks}/>
+                    <div key={index}>
+                        <SavedCard book={book} reload={this.loadBooks}/>
+                        <DeleteButton id={book._id} deleteBook={this.deleteBook} />
+                    </div>
                 ))}
             </div>
         );

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import DeleteButton from '../deleteButton'
+// import DeleteButton from '../deleteButton'
 import API from "../../utils/API";
 
 class SavedCard extends Component {
@@ -34,7 +34,7 @@ class SavedCard extends Component {
                 <p>Author: {authors}</p>
                 <img src={image} alt="Book Cover"/>
                 <a href={infoLink} target="_blank" rel="noopener noreferrer"> View in Google Book </a> 
-                <DeleteButton id={book._id} deleteBook={this.deleteBook}/>
+                {/* <DeleteButton id={book._id} deleteBook={this.deleteBook}/> */}
             </div>
         );
     }
