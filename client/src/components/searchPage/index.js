@@ -52,9 +52,11 @@ class Search extends Component{
                     Last Search Term:
                     {this.state.lastQuery}
                 </p>
-
-                <div> 
-                    Result Items:
+                <p> 
+                    Book Results:
+                </p>
+                <div className="container"> 
+                    
                     {this.state.items.map(book => (
                         <Card key={book.id} book={book}/>
                     ))}

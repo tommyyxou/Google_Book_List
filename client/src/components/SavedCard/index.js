@@ -34,9 +34,8 @@ class SavedCard extends Component {
                 <img src={image} alt="Book Cover" className="col-2 image"/>
                 <div className="col-9">
                     <h3>Book Title: {book.title}</h3>
-                    <h5>Author: </h5><span>{authors}</span>
-                    <h5>Description: </h5>
-                    <p>{book.description}</p>
+                    <h5>Author: {authors}</h5>
+                    <h6>Description: {book.description.slice(0, 275) + "... ..."}</h6>
                     <a href={infoLink} target="_blank" rel="noopener noreferrer"> View in Google Book </a> 
                 </div>
                 </div>
