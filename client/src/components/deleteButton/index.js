@@ -1,9 +1,9 @@
 import React from 'react';
-// import "./style.css"
+import "./style.css"
 
 function Delete(props) {
 
-        return <button className="save-btn btn-success" onClick={() => props.deleteBook(props)}>Delete</button>
+        return <button className="delete-btn btn-danger" onClick={() => props.deleteBook(props)}>X</button>
 }
 
 export default Delete;

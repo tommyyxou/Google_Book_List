@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-// import DeleteButton from '../deleteButton'
 import API from "../../utils/API";
+import "./style.css"
 
 class SavedCard extends Component {
 
@@ -29,13 +29,18 @@ class SavedCard extends Component {
         }
     }
         return(
-            <div style={{margin:'10px'}}>
-                <h3>{book.title}</h3>
-                <p>Author: {authors}</p>
-                <img src={image} alt="Book Cover"/>
-                <a href={infoLink} target="_blank" rel="noopener noreferrer"> View in Google Book </a> 
-                {/* <DeleteButton id={book._id} deleteBook={this.deleteBook}/> */}
-            </div>
+            <div className="savedCard col-11">
+                <div className="row">
+                <img src={image} alt="Book Cover" className="col-2 image"/>
+                <div className="col-9">
+                    <h3>Book Title: {book.title}</h3>
+                    <h5>Author: </h5><span>{authors}</span>
+                    <h5>Description: </h5>
+                    <p>{book.description}</p>
+                    <a href={infoLink} target="_blank" rel="noopener noreferrer"> View in Google Book </a> 
+                </div>
+                </div>
+            </div>  
         );
     }
 };

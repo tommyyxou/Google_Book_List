@@ -1,0 +1,15 @@
+.savedCard {
+    margin: 10px;
+    padding: 20px;
+    border: solid white 5px;
+    float: left;
+    background-color: lightslategrey;
+    border-radius: 5vh;
+    
+}
+
+.image {
+    height: 200px;
+    width:auto;
+    border-radius: 30px;
+}

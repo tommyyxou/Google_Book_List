@@ -15,11 +15,11 @@ class SaveBook extends Component{
         API.deleteBook(props.id).then(() =>
             this.loadBooks()
         )    
-    }
+    };
 
     componentDidMount() {
         this.loadBooks();
-    }
+    };
 
     loadBooks = () => {
         console.log ("load book")
@@ -30,11 +30,11 @@ class SaveBook extends Component{
 
     render () {
         return (
-            <div>
+            <div className="container">
                 {this.state.books.map((book, index)  => (
-                    <div key={index}>
+                    <div key={index} className="row">
                         <SavedCard book={book} reload={this.loadBooks}/>
-                        <DeleteButton id={book._id} deleteBook={this.deleteBook} />
+                        <DeleteButton id={book._id} deleteBook={this.deleteBook}/>
                     </div>
                 ))}
             </div>
