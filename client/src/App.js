@@ -9,10 +9,10 @@ function App() {
     <div className="App">
       <Router>
         <div>
-          <ul>
-            <li><Link to="/">Search</Link></li>
-            <li><Link to="/Save">Save</Link></li>
-          </ul>
+          
+            <Link to="/"><button className="btn btn-primary col-5">Search For you favorite books</button></Link>
+            <Link to="/Save"><button className="btn btn-info col-5">Saved Book List</button></Link>
+          
         </div>
         <div>
           <Route exact path="/" component={Search} />

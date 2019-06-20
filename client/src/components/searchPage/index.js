@@ -30,6 +30,7 @@ class Search extends Component{
             <form>
                 <input 
                     type = "text"
+                    className="col-4"
                     placeholder = "Search for a book"
                     onChange = { event => this.setState({query: event.target.value})} 
                     onKeyPress = { event => {
@@ -40,14 +41,10 @@ class Search extends Component{
                         }
                         }}
                 />
-                
-                <button type="button" onClick={()=> this.search()}>Submit</button> 
+                <br/>
+                <button className="btn btn-warning" type="button" onClick={()=> this.search()}>Submit</button> 
 
             </form>
-                <p> Search Term:
-                    {this.state.query}
-                </p>
-
                 <p> 
                     Last Search Term:
                     {this.state.lastQuery}
